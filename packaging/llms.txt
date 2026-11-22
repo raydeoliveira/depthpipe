@@ -1,0 +1,18 @@
+# DepthPipe (`depthpipe`)
+
+> Live 2D-to-3D stereo depth pipeline, Metal DIBR synthesizer, bidirectional MV-HEVC Spatial Video converter, and SteamOS Vulkan Z-buffer implicit layer CLI and MCP server.
+
+## Capabilities
+- **Hardware & Container Inspection (`probe`, `inspect`, `profile`)**: Probes Apple Silicon Metal GPU, VideoToolbox MV-HEVC encode/decode, ScreenCaptureKit TCC, and CoreML availability; parses ISO BMFF (`hvcC`, `lhvC`, `vexu`) stereo boxes; looks up deterministic Game Depth Profiles (`near_plane`, `far_plane`, `disparity_px`, `reversed_z`).
+- **Metal DIBR & Bidirectional MV-HEVC (`render`, `convert`)**: Runtime-compiled Metal compute kernels for `rgbd_dibr_synthesize`, `split_packed_stereo`, `shift_stereo_convergence`, and `weave_stereo_pair` across 9 stereo output formats (`mv-hevc`, `full-sbs`, `half-sbs`, `tab`, `row-interlaced`, `col-interlaced`, `checkerboard`, `lenticular`, `dubois-anaglyph`), plus audio-preserving VideoToolbox MV-HEVC transcodes.
+- **ScreenCaptureKit & Sim Fixtures (`capture`)**: Explicit `CGPreflightScreenCaptureAccess()` gating (exit `4` on denial) and 5 deterministic `--sim --fixture` generators (`gradient-shapes`, `checker-fg`, `portrait-card`, `desktop-sim`, `desktop-pillar`).
+- **SteamOS Vulkan Layer (`vulkan-layer/`)**: Clean-room C++20 Vulkan implicit layer (`VkLayer_depthpipe_zbuf.json`) and GLSL 450 compute DIBR shader (`shaders/dibr_zbuf.comp`).
+- **AI-Agent Native (`--describe`, `--json`, `--from-json -`, `mcp`)**: Deterministic exit codes (`0,1,2,3,4,5,130`) and stdio JSON-RPC 2.0 `depthpipe mcp`.
+
+## Install
+- Homebrew: `brew install raydeoliveira/tap/depthpipe`
+- Agent Skill: `SKILL.md` in repository root
+- MCP Manifest: `server.json` (`io.github.raydeoliveira/depthpipe`)
+
+## Pricing
+- Free Core: `probe`, `inspect`, `profile`, `--dry-run`, `render --out-layout dubois-anaglyph`, and read-only MCP tools.

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.raydeoliveira/depthpipe",
+  "title": "DepthPipe",
+  "description": "Live 2D-to-3D stereo depth pipeline, Metal DIBR weaver, and MV-HEVC Spatial Video tool.",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/raydeoliveira/depthpipe",
+  "repository": {
+    "url": "https://github.com/raydeoliveira/depthpipe",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/raydeoliveira/depthpipe/releases/download/v0.1.0/depthpipe-0.1.0-macos-arm64.mcpb",
+      "version": "0.1.0",
+      "fileSha256": "34b38a6fc9444e3c6f0e4febf285c190741951670321efaacd35e0a09f5479ab",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DEPTHPIPE_LICENSE_KEY",
+          "description": "Optional Polar.sh Pro license key unlocking Full-SBS, MV-HEVC, lenticular, and capture writes.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

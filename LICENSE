@@ -1,0 +1,22 @@
+DepthPipe Commercial Software License Agreement (EULA)
+Version 1.0 — Effective 2026
+
+Copyright (c) 2026 Raymond de Oliveira. All rights reserved.
+
+1. GRANT OF LICENSE
+DepthPipe is distributed under two tiers:
+(a) Free Core Tier: capability probing, ISO BMFF / MV-HEVC inspection,
+    game depth-profile lookup, --dry-run planning, and read-only MCP tools.
+(b) Pro Tier (Valid Polar.sh License Key Required): Metal DIBR stereo
+    synthesis, bidirectional MV-HEVC transcoding, live ScreenCaptureKit
+    pipelines, and Pro MCP tools. Open-source builds compiled with
+    -DOSS_EDITION unlock all features offline.
+
+2. RESTRICTIONS
+Except where permitted under an explicit MIT License distribution by the
+copyright holder, redistribution, resale, or license bypass is prohibited.
+
+3. DISCLAIMER OF WARRANTY
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. THE COPYRIGHT HOLDER IS NOT LIABLE FOR ANY DAMAGES ARISING FROM
+USE OF THIS SOFTWARE.
