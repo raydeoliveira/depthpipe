@@ -1,5 +1,7 @@
 # DepthPipe
 
+> **Product Hub:** [raymonddeoliveira.com/software](https://www.raymonddeoliveira.com/software#depthpipe) · **Buy DepthPipe Pro ($29):** [Polar Checkout](https://buy.polar.sh/polar_cl_pM3CJwYQ9ilUfvBxDVLf0iMGnTBJltLssCFFj1YSozm) · **Complete 4-CLI Bundle ($49, save $57):** [Bundle Checkout](https://buy.polar.sh/polar_cl_KTtCY3iQC4bzjqp93aC6LCog8UZqzZzuDgkAs3BvF74) · **Verified MCP:** [Glama](https://glama.ai/mcp/servers/raydeoliveira/depthpipe) · **Free Core:** `brew tap raydeoliveira/tap && brew install depthpipe`
+
 Live 2D-to-3D stereo depth pipeline, runtime-compiled Metal DIBR synthesizer, bidirectional MV-HEVC Spatial Video converter, and SteamOS Vulkan Z-buffer implicit layer CLI and stdio MCP server (`877,424` bytes / `857 KB` stripped macOS `arm64` binary, `7.00 ms` min / `9.19 ms` median `--version` cold start on Apple M4 Max, zero external Swift dependencies).
 
 ## What It Does and Does Not Do
