@@ -44,6 +44,12 @@ rm -rf ~/.config/depthpipe
 
 ## Quick Start (Human + `--json` Agent Usage)
 
+With DepthPipe installed, add the [agent instructions](SKILL.md) to your project for depth profiles and spatial video conversion.
+
+```sh
+npx skills add raydeoliveira/depthpipe
+```
+
 ```bash
 $ depthpipe --version
 depthpipe 0.1.0 (commercial, arm64)

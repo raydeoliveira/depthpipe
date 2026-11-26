@@ -2,17 +2,20 @@
 name: depthpipe
 description: >-
   Live 2D-to-3D stereo depth pipeline, Apple Silicon Metal DIBR synthesizer,
-  bidirectional MV-HEVC Spatial Video converter, and SteamOS Vulkan Z-buffer
-  implicit layer CLI and MCP server. Use when probing Metal/MV-HEVC/ScreenCaptureKit
+  bidirectional MV-HEVC Spatial Video converter CLI and MCP server, with a
+  SteamOS Vulkan Z-buffer layer distributed as source. Use when probing Metal/MV-HEVC/ScreenCaptureKit
   capabilities, inspecting ISO BMFF Spatial Video boxes, looking up Game Depth
   Profiles, rendering 2D/RGB-D/pair frames to Full-SBS or lenticular PNGs,
-  converting MV-HEVC <-> Full-SBS/Half-SBS/TAB/anaglyph video, capturing live
+  converting between MV-HEVC and Full-SBS/Half-SBS/TAB/anaglyph video, capturing live
   or simulated frames, or composing UNIX spatial pipes via --from-json -.
 ---
 
 # Skill: DepthPipe (`depthpipe`)
 
 ## Install & Discovery
+
+The v0.1.0 CLI and MCP bundle run on Apple Silicon with macOS 14 or later. The release archive also contains the Vulkan layer source for Linux and SteamOS.
+
 ```bash
 brew install raydeoliveira/tap/depthpipe
 depthpipe --describe
