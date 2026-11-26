@@ -18,24 +18,24 @@ Live 2D-to-3D stereo depth pipeline, runtime-compiled Metal DIBR synthesizer, bi
 
 ## Install and Uninstall
 
-```bash
-# Build from source (Commercial edition)
-cd projects/depthpipe
+The Homebrew package runs on Apple Silicon with macOS Sonoma (14) or later. List the built-in stereo depth profiles without recording the screen.
 
-
-# Or via Homebrew tap
+```sh
 brew install raydeoliveira/tap/depthpipe
+depthpipe profiles --json
 ```
 
-Build and test the SteamOS Vulkan layer on Linux/SteamOS (or run its C++20 ASan+UBSan tests on macOS):
+The release page provides the macOS archive, MCP bundle and SHA-256 checksums. [Version 0.1.0 downloads](https://github.com/raydeoliveira/depthpipe/releases/tag/v0.1.0)
 
-```bash
-make -C projects/depthpipe/vulkan-layer clean all test
+For Linux or SteamOS Vulkan development, the release archive includes the layer source. Extract the archive and run this command from the directory containing the extracted folder.
+
+```sh
+make -C depthpipe-0.1.0-macos-arm64/vulkan-layer all test
 ```
 
-Linux Vulkan layer environment variables: `DEPTHPIPE_VK_ENABLE=1`, `DEPTHPIPE_VK_DISABLE=1`, `DEPTHPIPE_BYPASS=1`, `DEPTHPIPE_NEAR_PLANE`, `DEPTHPIPE_FAR_PLANE`, `DEPTHPIPE_DISPARITY_PX`, `DEPTHPIPE_CONVERGENCE_PX`, `DEPTHPIPE_REVERSED_Z`, `DEPTHPIPE_DEPTH_INVERT`.
+Linux Vulkan layer environment variables include `DEPTHPIPE_VK_ENABLE=1`, `DEPTHPIPE_VK_DISABLE=1`, `DEPTHPIPE_BYPASS=1`, `DEPTHPIPE_NEAR_PLANE`, `DEPTHPIPE_FAR_PLANE`, `DEPTHPIPE_DISPARITY_PX`, `DEPTHPIPE_CONVERGENCE_PX`, `DEPTHPIPE_REVERSED_Z`, `DEPTHPIPE_DEPTH_INVERT`.
 
-To uninstall:
+### Uninstall
 
 ```bash
 brew uninstall depthpipe
